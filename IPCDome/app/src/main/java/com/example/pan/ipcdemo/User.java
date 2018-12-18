@@ -1,4 +1,4 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 
 import android.os.Parcel;
@@ -13,7 +13,7 @@ public class User implements Parcelable {
     private String name;
     private int password;
 
-    protected User(Parcel in) {
+    public User(Parcel in) {
         name = in.readString();
         password = in.readInt();
     }

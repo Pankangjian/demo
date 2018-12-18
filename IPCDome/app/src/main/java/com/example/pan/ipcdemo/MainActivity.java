@@ -1,4 +1,4 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,9 +18,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private void init() {
         Button bt_bundle = (Button) findViewById(R.id.bt_bundle);
         Button bt_file = (Button) findViewById(R.id.bt_file);
+        Button bt_messenger = (Button) findViewById(R.id.bt_messenger);
+        Button bt_aidl = (Button) findViewById(R.id.bt_aidl);
+        bt_aidl.setOnClickListener(this);
+        bt_messenger.setOnClickListener(this);
         bt_bundle.setOnClickListener(this);
         bt_file.setOnClickListener(this);
-
     }
 
     @Override
@@ -28,12 +31,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.bt_bundle:
-                Intent intent = new Intent(MainActivity.this, BundleDome.class);
+                Intent intent = new Intent(MainActivity.this, BundleDemo.class);
                 startActivity(intent);
                 break;
             case R.id.bt_file:
-                Intent intent1 = new Intent(MainActivity.this, FileSharingDome.class);
+                Intent intent1 = new Intent(MainActivity.this, FileSharingDemo.class);
                 startActivity(intent1);
+                break;
+            case R.id.bt_messenger:
+                Intent intent2 = new Intent(MainActivity.this, MessengerDemo.class);
+                startActivity(intent2);
+                break;
+            case R.id.bt_aidl:
+                Intent intent3 = new Intent(MainActivity.this, MessengerDemo.class);
+                startActivity(intent3);
                 break;
         }
     }

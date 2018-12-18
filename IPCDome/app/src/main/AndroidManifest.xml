@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pan.ipcdome">
+    package="com.example.pan.ipcdemo">
 
     <application
         android:allowBackup="true"
@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.pan.ipcdemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BundleDome"/>
-        <activity android:name=".BundleText"/>
-        <activity android:name=".FileSharingDome"/>
-        <activity android:name=".FileSharingTest"/>
+        <activity android:name="com.example.pan.ipcdemo.BundleDemo"/>
+        <activity android:name="com.example.pan.ipcdemo.BundleText"/>
+        <activity android:name="com.example.pan.ipcdemo.FileSharingDemo"/>
+        <activity android:name="com.example.pan.ipcdemo.FileSharingTest"/>
+        <activity android:name="com.example.pan.ipcdemo.MessengerDemo"/>
+
+        <service android:name="com.example.pan.ipcdemo.service.MessengerService"
+            />
     </application>
 
 </manifest>

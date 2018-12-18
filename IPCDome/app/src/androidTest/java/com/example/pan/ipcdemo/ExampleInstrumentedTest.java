@@ -1,4 +1,4 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.widget.EditText;
  * Created by pan on 2018/12/17.
  */
 
-public class BundleDome extends Activity {
+public class BundleDemo extends Activity {
     EditText et_name;
     EditText et_password;
 
@@ -37,7 +37,7 @@ public class BundleDome extends Activity {
                 Bundle bundle = new Bundle();
                 // 把用户数据放入到bundle中,"user"的key在取出数据时必须一致
                 bundle.putSerializable("user", User);
-                Intent intent = new Intent(BundleDome.this, BundleText.class);
+                Intent intent = new Intent(BundleDemo.this, BundleText.class);
                 // 把bundle放入intent里
                 intent.putExtras(bundle);
                 startActivity(intent);

@@ -1,15 +1,10 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.widget.TextView;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 
 /**
  * 显示类

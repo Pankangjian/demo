@@ -1,8 +1,7 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.TextView;

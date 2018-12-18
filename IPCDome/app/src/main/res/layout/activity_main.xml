@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.pan.ipcdome.MainActivity">
+    tools:context="com.example.pan.ipcdemo.MainActivity">
 
     <Button
         android:id="@+id/bt_bundle"
@@ -18,5 +18,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="文件共享" />
+
+    <Button
+        android:id="@+id/bt_messenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="messenger通讯" />
+
+    <Button
+        android:id="@+id/bt_aidl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AIDL通讯" />
 
 </LinearLayout>

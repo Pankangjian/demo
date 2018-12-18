@@ -1,4 +1,4 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import org.junit.Test;
 

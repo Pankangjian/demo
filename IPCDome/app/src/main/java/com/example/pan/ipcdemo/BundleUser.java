@@ -1,9 +1,9 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import java.io.Serializable;
 
 /**
- * Serializable实例化
+ * Serializable序列化
  * Created by pan on 2018/12/17.
  */
 

@@ -1,12 +1,9 @@
-package com.example.pan.ipcdome;
+package com.example.pan.ipcdemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Path;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,19 +17,20 @@ import java.io.ObjectOutputStream;
  * Created by pan on 2018/12/17.
  */
 
-public class FileSharingDome extends Activity {
+public class FileSharingDemo extends Activity {
     EditText et_get_text;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file);
+
         et_get_text = (EditText) findViewById(R.id.et_get_text);
         Button bt_file = (Button) findViewById(R.id.bt_file_1);
         bt_file.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 persistToFile();
-                Intent intent = new Intent(FileSharingDome.this,FileSharingTest.class);
+                Intent intent = new Intent(FileSharingDemo.this,FileSharingTest.class);
                 startActivity(intent);
             }
         });
