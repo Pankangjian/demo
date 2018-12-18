@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(intent2);
                 break;
             case R.id.bt_aidl:
-                Intent intent3 = new Intent(MainActivity.this, MessengerDemo.class);
+                Intent intent3 = new Intent(MainActivity.this, AidlDemo.class);
                 startActivity(intent3);
                 break;
         }
