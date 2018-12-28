@@ -73,7 +73,7 @@ public class MessengerDemo extends Activity {
             message.setData(data);
 
             try {
-                // 发送消息
+                // 发送消息，Messenger send中方法
                 mService.send(message);
                 // 获取服务端回应的Messenger对象
                 message.replyTo = messengerClient;

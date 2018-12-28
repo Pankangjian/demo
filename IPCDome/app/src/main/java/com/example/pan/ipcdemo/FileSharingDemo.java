@@ -19,6 +19,7 @@ import java.io.ObjectOutputStream;
 
 public class FileSharingDemo extends Activity {
     EditText et_get_text;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +31,12 @@ public class FileSharingDemo extends Activity {
             @Override
             public void onClick(View v) {
                 persistToFile();
-                Intent intent = new Intent(FileSharingDemo.this,FileSharingTest.class);
+                Intent intent = new Intent(FileSharingDemo.this, FileSharingTest.class);
                 startActivity(intent);
             }
         });
     }
+
     private void persistToFile() {
         new Thread(new Runnable() {
             @Override
@@ -52,7 +54,7 @@ public class FileSharingDemo extends Activity {
                 try {
                     objectOutputStream = new ObjectOutputStream(new FileOutputStream(cachedFile));
                     objectOutputStream.writeObject(user);
-                    System.out.print("名字="+user.getName());
+                    System.out.print("名字=" + user.getName());
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {

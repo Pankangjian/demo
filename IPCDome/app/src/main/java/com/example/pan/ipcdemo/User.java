@@ -10,12 +10,21 @@ import android.os.Parcelable;
  */
 
 public class User implements Parcelable {
-    private String name;
-    private int password;
+    public int userId;
+    public String userName;
+
+    public User() {
+        super();
+    }
+
+    public User(int bookId, String bookName) {
+        this.userId = bookId;
+        this.userName = bookName;
+    }
 
     public User(Parcel in) {
-        name = in.readString();
-        password = in.readInt();
+        userId = in.readInt();
+        userName = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -30,19 +39,21 @@ public class User implements Parcelable {
         }
     };
 
-
-
     @Override
     public int describeContents() {
-        // 返回当前对象的内容描述。几乎所有情况下都是返回0
         return 0;
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        // 将当前对象写入到序列化结构中
-        dest.writeString(name);
-        dest.writeInt(password);
+        dest.writeInt(userId);
+        dest.writeString(userName);
     }
 
+    @Override
+    public String toString() {
+        return "(编号:" +
+                userId + ", " + "姓名=" + "\"" + userName + "\"" + ")"
+                ;
+    }
 }

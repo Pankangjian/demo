@@ -22,7 +22,7 @@ public class MessengerService extends Service {
         public void handleMessage(Message msg) {
             // 接受客户端发送的消息
             Log.d("service", "服务端接受到客户端信息:" + msg.getData().getString("msg"));
-            // 相应客户端请求
+            // 回应客户端请求
             Messenger replyTo = msg.replyTo;
             Message replyMessage = Message.obtain();
             Bundle bundle = new Bundle();
@@ -38,7 +38,7 @@ public class MessengerService extends Service {
             super.handleMessage(msg);
         }
     };
-    // 通过handler 构建Mesenger 对象
+    // 通过handler 构建 Mesenger 对象
     private final Messenger messenger = new Messenger(handler);
 
     @Nullable

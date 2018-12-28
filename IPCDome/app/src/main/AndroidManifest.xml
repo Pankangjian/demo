@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pan.ipcdemo">
 
+    <!--允许应用程序改变网络状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--允许应用程序改变WIFI连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!--允许应用程序访问有关的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--允许应用程序访问WIFI网卡的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--允许应用程序完全使用网络-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,13 +32,31 @@
         <activity android:name="com.example.pan.ipcdemo.FileSharingDemo" />
         <activity android:name="com.example.pan.ipcdemo.FileSharingTest" />
         <activity android:name="com.example.pan.ipcdemo.MessengerDemo" />
-        <activity android:name=".AidlDemo"/>
+        <activity android:name=".AidlDemo" />
+        <activity android:name=".contentProvider.ContentProviderDemo" />
+        <activity android:name=".SocketDemo" />
+        <activity android:name=".Socket.TCPSocketDemo"/>
+        <activity android:name=".Socket.ChatSocketDemo"/>
+        <activity android:name=".Socket.LoginSocketDemo"/>
 
         <service android:name="com.example.pan.ipcdemo.service.MessengerService" />
         <service
             android:name=".service.BookService"
             android:enabled="true"
             android:exported="true"
+            android:process=":remote" />
+        <service
+            android:name=".service.SocketService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <provider
+            android:name=".contentProvider.BookProvider"
+            android:authorities="com.example.pan.ipcdemo.book.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.example.pan.ipcdemo.PROVIDER"
             android:process=":remote" />
     </application>
 

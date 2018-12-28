@@ -31,4 +31,29 @@
         android:layout_height="wrap_content"
         android:text="AIDL通讯" />
 
+    <Button
+        android:id="@+id/bt_cp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider通讯" />
+
+    <Button
+        android:id="@+id/bt_socket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="socket通讯" />
+
+    <Button
+        android:id="@+id/bt_socket_tcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tcp" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat" />
+
+
 </LinearLayout>

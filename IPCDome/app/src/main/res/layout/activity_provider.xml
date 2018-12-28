@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_cp_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看书籍数据库" />
+
+    <TextView
+        android:id="@+id/tv_cp_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_cp_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看用户" />
+
+    <TextView
+        android:id="@+id/tv_cp_user_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_cp_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_cp_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加一本开发者艺术书籍" />
+</LinearLayout>
